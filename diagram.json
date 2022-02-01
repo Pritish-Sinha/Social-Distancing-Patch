@@ -1,66 +1,50 @@
-#{
+{
   "version": 1,
-  "author": "Anonymous maker",
+  "author": "Pritish Sinha",
   "editor": "wokwi",
   "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
     {
-      "type": "wokwi-arduino-uno",
-      "id": "uno",
-      "top": 0,
-      "left": 0,
-      "rotate": 0,
-      "hide": false,
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": 248.03,
+      "left": -182.14,
       "attrs": {}
-    },
-    {
-      "type": "wokwi-hc-sr04",
-      "id": "ultrasonic1",
-      "top": -4.67,
-      "left": -180,
-      "rotate": 0,
-      "hide": false,
-      "attrs": { "distance": "242" }
     },
     {
       "type": "wokwi-buzzer",
       "id": "bz1",
-      "top": 83.85,
-      "left": -183.12,
-      "rotate": 0,
-      "hide": false,
+      "top": 32.82,
+      "left": -171.71,
       "attrs": { "volume": "0.1" }
     },
     {
-      "type": "wokwi-pir-motion-sensor",
-      "id": "pir1",
-      "top": 404.26,
-      "left": -165.66,
-      "rotate": 0,
-      "hide": false,
-      "attrs": {}
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -131.29,
+      "left": -282.47,
+      "attrs": { "distance": "400" }
     },
     {
       "type": "wokwi-led-ring",
       "id": "ring1",
-      "top": 292.05,
-      "left": 194.64,
-      "rotate": 0,
-      "hide": false,
+      "top": 33.37,
+      "left": 295.58,
       "attrs": { "pixels": "16" }
     }
   ],
   "connections": [
-    [ "ultrasonic1:TRIG", "uno:6", "green", [ "v206", "h430", "v-318", "h-131" ] ],
-    [ "ultrasonic1:ECHO", "uno:5", "green", [ "v173", "h389", "v-275", "h-89" ] ],
-    [ "ultrasonic1:GND", "uno:GND.1", "black", [ "v27", "h80", "v-143", "h115" ] ],
-    [ "ultrasonic1:VCC", "uno:5V", "red", [ "v278", "h285", "v-1" ] ],
-    [ "bz1:1", "uno:GND.2", "green", [ "v65", "h325" ] ],
-    [ "bz1:2", "uno:8", "green", [ "v226", "h501", "v-429", "h-181" ] ],
-    [ "pir1:VCC", "uno:5V", "red", [ "v34", "h308" ] ],
-    [ "pir1:GND", "uno:GND.3", "black", [ "v24", "h301" ] ],
-    [ "pir1:OUT", "uno:10", "green", [ "v9", "h486", "v-547", "h-213" ] ],
-    [ "ring1:GND", "uno:GND.3", "black", [ "v0" ] ],
-    [ "ring1:VCC", "uno:5V", "red", [ "v0" ] ],
-    [ "ring1:DIN", "uno:7", "green", [ "v0", "h88", "v-461", "h-172" ] ]
+    [ "ultrasonic1:TRIG", "uno:6", "green", [ "v26", "h401" ] ],
+    [ "ultrasonic1:ECHO", "uno:5", "green", [ "v18", "h404" ] ],
+    [ "ultrasonic1:GND", "uno:GND.1", "black", [ "v31", "h303" ] ],
+    [ "ultrasonic1:VCC", "uno:3.3V", "red", [ "v481", "h57" ] ],
+    [ "bz1:1", "uno:8", "green", [ "v118", "h431", "v-265", "h-119" ] ],
+    [ "bz1:2", "uno:GND.2", "green", [ "v97", "h310" ] ],
+    [ "pir1:VCC", "uno:5V", "red", [ "v56", "h307" ] ],
+    [ "pir1:GND", "uno:GND.3", "black", [ "v26", "h303" ] ],
+    [ "pir1:OUT", "uno:10", "green", [ "v41", "h418", "v-408", "h-138" ] ],
+    [ "ring1:GND", "uno:GND.3", "black", [ "v27", "h-167" ] ],
+    [ "ring1:DIN", "uno:7", "green", [ "v13", "h-73", "v-241", "h-110" ] ],
+    [ "ring1:VCC", "uno:5V", "red", [ "v71", "h-200" ] ]
   ]
 }
